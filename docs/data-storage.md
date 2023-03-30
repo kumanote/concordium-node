@@ -172,7 +172,7 @@ block, i.e., after all the transactions have taken effect.
 - smart contract instances
 - smart contract modules, both the code that is deployed and processed, ready to
   execute, code
-- total amount of GTU and total amount of encrypted GTU, as well as the status
+- total amount of $CCD(formerly called GTU) and total amount of encrypted $CCD, as well as the status
   of reward accounts; the baking reward account, the finalization reward
   account, and the gas account.
 - identity providers
@@ -330,8 +330,8 @@ since the auxiliary mapping of references to indices can be recovered.
 ### Bank status
 
 The bank status part of the state records a few tokenomics parameters.
-- the total amount of GTU in existence
-- the total amount of GTU that is encrypted
+- the total amount of $CCD in existence
+- the total amount of $CCD that is encrypted
 - balance of the baking and finalization rewards accounts, as well as the gas
   account.
 
@@ -409,7 +409,7 @@ but it will make a copy of the rest of the update queue.
 ### Release schedule
 
 The release schedule is a result of scheduled transfers. The main complication
-is that the effect of the transaction is not only immediate, but the GTU are
+is that the effect of the transaction is not only immediate, but the $CCD are
 released over a period of time. This part of the state keeps the information
 needed to efficiently check whether any releases need to be effected at the
 beginning of each block. In particular this part just maps account addresses to
@@ -429,9 +429,9 @@ and the map is only updated upon an active release.
 
 For each block we store the outcomes of transactions in that block. The outcome
 includes information about the order in the block, whether it succeeded or
-failed, the energy and GTU cost of transactions, and any events that resulted
+failed, the energy and $CCD cost of transactions, and any events that resulted
 from the transaction. Events are transaction-type specific, and include things
-like GTU transfer, and smart contract updates.
+like $CCD transfer, and smart contract updates.
 
 Transaction outcomes are currently stored as a "flat" structure, as a serialized
 list of transaction outcomes. The outcomes for a block are never updated once
