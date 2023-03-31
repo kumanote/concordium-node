@@ -53,6 +53,8 @@ hie.yaml
 .DS_Store
 /concordium-node/*.log
 /stack.yaml.lock
+.idea/
+.envrc
 
 # MacOS distribution
 /scripts/distribution/macOS-package/tools
